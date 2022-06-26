@@ -1,0 +1,114 @@
+.portfolio {
+  padding-top: var(--first-padding);
+  padding-bottom: var(--first-padding);
+}
+
+.filter__list {
+  display: flex;
+  justify-content: center;
+  margin-bottom: var(--first-margin);
+}
+
+.filter__item:not(:first-child) {
+  margin-left: var(--fitth-margin);
+}
+.filter__btn {
+  padding: 6px 22px;
+
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--secondary-title);
+  border-radius: 4px;
+  border-color: transparent;
+  background-color: var(--secondary-background);
+  transition: background-color 250ms cubic-bezier(var(--cubic-bezier)),
+    color 250ms cubic-bezier(var(--cubic-bezier)),
+    border-color 250ms cubic-bezier(var(--cubic-bezier)),
+    box-shadow 250ms cubic-bezier(var(--cubic-bezier));
+}
+
+.filter__btn:hover,
+.filter__btn:focus {
+  color: var(--main-title);
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+  box-shadow: var(--box-shadow-third);
+}
+
+.card {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: calc(-1 * var(--second-margin));
+  margin-top: calc(-1 * var(--second-margin));
+}
+
+.card__item {
+  flex-basis: calc(100% / 3 - var(--second-margin));
+  margin-left: var(--second-margin);
+  margin-top: var(--second-margin);
+}
+
+/* .portfolio-item-preview:hover .portfolio-img-text,
+.portfolio-item-preview:focus .portfolio-img-text, */
+.card__link:focus .card__copy,
+.card__link:hover .card__copy {
+  transform: translateY(0);
+}
+
+.card__tumb {
+  position: relative;
+  overflow: hidden;
+}
+
+.card__copy {
+  position: absolute;
+  transform: translateY(120%);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 63px 24px;
+
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+  color: var(--main-title);
+  background-color: var(--eight-background);
+
+  transition: transform 250ms cubic-bezier(var(--cubic-bezier));
+}
+
+.card__wrap {
+  padding: 20px 24px;
+  border: 1px solid #eeeeee;
+  border-top: none;
+}
+
+.card__title {
+  margin-bottom: 4px;
+
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  color: var(--secondary-title);
+}
+
+.card__text {
+  line-height: 1.88;
+  letter-spacing: 0.03em;
+  color: var(--secondary-text);
+}
+
+.card__link {
+  display: block;
+  transition: box-shadow 250ms cubic-bezier(var(--cubic-bezier));
+}
+
+.card__link:hover,
+.card__link:focus {
+  box-shadow: var(--box-shadow-second);
+}
